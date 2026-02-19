@@ -39,11 +39,24 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ### Notion - 双方向連携
 
-#### **出力（既存維持）**
-- **API Secret:** [REDACTED]
-- **親ページID:** [REDACTED] 
-- **親ページURL:** https://www.notion.so/Workspace-[REDACTED]
-- **用途:** 調査内容をドキュメントにまとめてURL共有
+#### **2段階セキュリティ設計**
+- **読み取り用APIキー**: Uto inc HQ全体アクセス（検索・参照）
+- **書き込み用APIキー**: 小島あい作業Workspace限定（セキュア出力）
+- **親ページID:** 30a4351de9468003a586fecc31127c90
+- **親ページURL:** https://www.notion.so/Workspace-30a4351de9468003a586fecc31127c90
+
+#### **⚠️ 重要：1依頼1ページルール**
+- **絶対守る**: 1つの依頼には1つの最終成果物ページのみ作成
+- **中間成果物は作らない**: 試行錯誤の過程で複数ページを作成しない
+- **更新方式**: 同じページを更新するか、最初から最終版を作成する
+- **親階層整理**: 依頼完了後は不要な中間ページを必ず削除
+
+#### **ワークフロー:**
+1. Slack入力（URL/自然言語/検索クエリ） 
+2. 読み取りAPI → HQ全体から情報収集
+3. AI分析 → サマリー・レポート作成  
+4. **🚨 1ページのみ作成** → 制限エリアに保存
+5. Slack返信 → サマリー + NotionページURL（1つだけ）
 
 #### **入力（新設）- V2改善版**
 - **Notion Reader V2:** セキュア・高性能版読み取り機能
