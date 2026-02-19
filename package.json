@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@notionhq/client": "^5.9.0",
+    "dotenv": "^17.3.1",
     "pptxgenjs": "^4.0.1"
   },
   "name": "workspace",

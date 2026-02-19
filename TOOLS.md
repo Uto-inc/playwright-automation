@@ -45,14 +45,25 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - **親ページURL:** https://www.notion.so/Workspace-[REDACTED]
 - **用途:** 調査内容をドキュメントにまとめてURL共有
 
-#### **入力（新設）**
-- **Notion Reader:** 既存ページ読み取り・検索機能
-- **CLIツール:** `npx tsx notion-cli.ts`
-- **用途:** 過去の資料確認・ワークスペース検索
+#### **入力（新設）- V2改善版**
+- **Notion Reader V2:** セキュア・高性能版読み取り機能
+- **CLIツール:** `npx tsx notion-cli-v2.ts`
+- **改善点:** 環境変数管理・ページネーション・リトライ機構
+- **用途:** 過去の資料確認・ワークスペース検索・大量データ対応
+
+#### セキュリティ設定:
+```bash
+# 推奨: 環境変数管理
+export NOTION_API_KEY=your_key_here
+export NOTION_ROOT_PAGE_ID=your_page_id_here
+
+# または .env ファイル作成
+npx tsx notion-cli-v2.ts setup
+```
 
 #### 使い分け:
-- **「あのページ見て」** → Notion Reader（読み取り）
-- **「調査結果まとめて」** → 既存API（書き込み）
+- **「あのページ見て」** → Notion Reader V2（読み取り・セキュア）
+- **「調査結果まとめて」** → 既存API（書き込み・維持）
 
 ### Google Drive - 愛ちゃん専用Workspace
 
